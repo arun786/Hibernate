@@ -1,5 +1,7 @@
 package com.arun.main;
 
+import java.math.BigDecimal;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -11,9 +13,9 @@ public class Client {
 
 	public static void main(String[] args) {
 		Employee emp = new Employee();
-		emp.setId(4);
-		emp.setName("Sachin");
-		emp.setSalary("10000");
+
+		emp.setName("Arun");
+		emp.setSalary(new BigDecimal("1000"));
 		
 		Session session = Util.getSession();
 		session.beginTransaction();
